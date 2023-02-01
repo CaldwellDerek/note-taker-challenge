@@ -7,7 +7,7 @@ const generateUniqueId = require("generate-unique-id");
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true}));
-server.use(express.static("public"));
+server.use(express.static(__dirname + "/Develop/public"));
 
 // This sends the landing page to the client when requested from the server
 server.get("/", (request, response)=> {
