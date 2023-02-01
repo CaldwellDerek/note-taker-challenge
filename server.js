@@ -63,6 +63,34 @@ server.post("/api/notes", (request, response)=> {
     });
 });
 
+server.delete("/api/notes/:id", (request, response)=> {
+    // Reads db.json and saves the data to a new array dbArray
+    fs.readFile("./Develop/db/db.json", "utf-8", (error, data) => {
+        if (error) {
+            // Response used to show process was unsuccessful
+            response.send("Unable to delete note!");
+            throw error;
+        } else {
+            // Array used to hold notes that don't match the id parameter
+            let dbArray = [];
+            // Loops over db.json and checks if the note's id == id paramter
+            for (let note of JSON.parse(data)){
+                // If the note.id doesn't match, it's put into the dbArray
+                if (!(note.id == request.params.id)){
+                    dbArray.push(note);
+                }
+            }
+            
+            // All note's that didn't match the id parameter overwrite the db.json file which removes the specified note
+            fs.writeFile("./Develop/db/db.json", JSON.stringify(dbArray, null, 4), error => {
+                if (error) throw error;
+            });
+            // Response used to confirm process
+            response.send("The note has been deleted!");
+        }
+    });
+});
+
 
 // Message displayed to terminal when server is running
 server.listen(PORT, ()=> {
