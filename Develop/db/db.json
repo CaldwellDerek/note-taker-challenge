@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "id": "ogr3thhe0l3kogvb86in",
+        "title": "Groceries",
+        "text": "Milk\nBread\nButter"
+    },
+    {
+        "id": "24dqhnvalo3h6j4bs75k",
+        "title": "TODO 01/31/2023",
+        "text": "Turn in assignment.."
+    },
+    {
+        "id": "ppr33wdgmrqtzhs8hu6q",
+        "title": "Meeting 02/01/2023",
+        "text": "Meeting 09:00 AM..."
+    }
+]
