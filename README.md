@@ -35,3 +35,12 @@ If you have any questions, feel free to reach out to me at my email: djohncaldwe
 All of my work can be viewed at my GitHub profile: [CaldwellDerek](https://github.com/CaldwellDerek
 
 ## Screenshots
+
+Landing Page:
+![Landing-Page](./Develop/public/assets/images/landing-page.png)
+
+Notes Page:
+![Notes-Page](./Develop/public/assets/images/notes-page.png)
+
+Sample Usage:
+![Sample-Usage](./Develop/public/assets/images/sample-use.png)

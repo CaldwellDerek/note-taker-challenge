@@ -19,6 +19,8 @@ server.get("/notes", (request, response)=> {
     response.sendFile(path.join(__dirname, "/Develop/public/notes.html"));
 });
 
+
+// Displays the data from the db.json file when requested from the server
 server.get("/api/notes", (request, response)=> {
     fs.readFile("./Develop/db/db.json", "utf-8", (error, data)=> {
         if (error){
